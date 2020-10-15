@@ -12,7 +12,7 @@ class Player(enum.Enum):  # Lett måte å holde styr på hvilket tall det er som
 
 from collections import namedtuple
 
-class Point(namedtuple('Point', 'row col')):
+class Point(namedtuple('Point', ['row', 'col'])):
     def neighbors(self):
         return [
             Point(self.row - 1, self.col),
@@ -20,3 +20,9 @@ class Point(namedtuple('Point', 'row col')):
             Point(self.row, self.col - 1),
             Point(self.row, self.col + 1)
         ]
+
+q = Player(1)
+z = q.other
+x = z.other
+p = Player(2)
+z=2
